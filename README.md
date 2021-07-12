@@ -1,6 +1,6 @@
 # Admin | The Official VGCUSA Discord Bot
 
-**THIS IS THE DOCKER REPOSITORY. FOR THE ORIGINAL REPOSITORY, VISIT [HERE](https://github.com/TheD4nM4n/admin).
+**THIS IS THE DOCKER REPOSITORY. FOR THE ORIGINAL REPOSITORY, VISIT [HERE](https://github.com/TheD4nM4n/admin).**
 
 Admin is a Discord bot designed for ease-of-use, meant for teachers who want to utilize the power of Discord to keep
 students connected to each other, even outside of school.
