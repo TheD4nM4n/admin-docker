@@ -1,7 +1,6 @@
 // Necessary requirements
 const fs = require('fs');
 const { Client, Intents, Collection } = require('discord.js');
-const { token } = require('./config.json');
 
 // Client and command collection initialization
 const client = new Client({
@@ -29,5 +28,5 @@ for (const file of eventFiles) {
   }
 }
 
-// Logging into Discord with access token (found in config.json)
-client.login(token);
+// Logging into Discord with access token (set with TOKEN env variable)
+client.login(process.env.TOKEN);
