@@ -1,4 +1,4 @@
-#
+
 #    Copyright 2020 Daniel Poe
 #
 #    This file is a part of Admin.
@@ -16,20 +16,24 @@
 #    You should have received a copy of the GNU General Public License
 #    along with Admin.  If not, see https://www.gnu.org/licenses/.
 
-FROM python:3.10.0b3-alpine3.14
+FROM node:17.1.0-bullseye
 MAINTAINER TheD4nM4n thed4nm4n@gmail.com
 
+WORKDIR /admin
+
 # Adds required bot files and dependency files to the image
-ADD admin ./admin/
-ADD requirements.txt .
-ADD core.py .
+COPY assets ./assets/
+COPY commands ./commands/
+COPY data ./data/
+COPY events ./events/
+COPY COPYING.txt .
+COPY index.js .
+COPY LICENSE .
+COPY package.json .
+COPY package-lock.json .
 
-# Updates and installs tools required to build Python dependencies
-RUN apk update
-RUN apk add g++ make
-
-# Installs Python dependencies
-RUN pip install -r ./requirements.txt
+# Installs dependencies from package.json
+RUN npm install
 
 # Runs the bot script
-CMD ["python", "-u", "core.py"]
+CMD ["node", "./index.js"]
