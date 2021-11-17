@@ -31,11 +31,6 @@ Admin also includes polls, to gauge your server's feeling towards certain ideas!
     - Add custom words to a blacklist
     - Utilize a default word list for easy moderation
     - Mute members to keep them from typing in chat channels
-- Event management
-    - Commands to draw winners for giveaways
-- Modular nature
-    - Based off of discord.py's Cog system
-    - Easy assignment of custom modules
 
 ### Planned features
 
