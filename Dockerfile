@@ -35,5 +35,8 @@ COPY package-lock.json .
 # Installs dependencies from package.json
 RUN npm install
 
+#Deploys commands globally for the bot
+RUN node ./deploy-commands.js
+
 # Runs the bot script
 CMD ["node", "./index.js"]
