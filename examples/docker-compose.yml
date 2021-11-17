@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  admin:
+    image: thed4nm4n/admin
+    container-name: admin
+    environment:
+      TOKEN: null
+      CLIENT_ID: null
+    restart: unless-stopped
