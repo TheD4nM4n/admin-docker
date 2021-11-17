@@ -1,7 +1,6 @@
 const fs = require('fs');
 const Filter = require('bad-words');
 const { MessageAttachment } = require('discord.js');
-const { strictEqual } = require('assert');
 
 const filter = new Filter();
 

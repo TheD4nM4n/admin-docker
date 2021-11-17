@@ -1,9 +1,7 @@
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const Anilist = require('anilist-node');
-const { anilistToken } = require('../config.json');
-const fs = require('fs');
 
-const anilist = new Anilist(anilistToken);
+const anilist = new Anilist();
 
 module.exports = {
     data: new SlashCommandBuilder()
